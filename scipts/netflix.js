@@ -1,5 +1,13 @@
-// let myVue = new Vue({
-//     el: '#myApp',
+let myVue = new Vue({
+    el: '#myApp',
 
-//     data: 
-// })
+    data: {
+        watchlist: []
+    },
+
+    methods: {
+        addMovie(x) {
+            this.watchlist.push(x)
+        }
+    }
+})
