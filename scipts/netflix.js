@@ -8,6 +8,10 @@ let myVue = new Vue({
     methods: {
         addMovie(x) {
             this.watchlist.push(x)
+        },
+
+        dltMovie() {
+            this.watchlist.pop()
         }
-    }
+    },
 })

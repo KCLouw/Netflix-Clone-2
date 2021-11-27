@@ -31,38 +31,37 @@
      <div class="row">
          <h2>Netflix Originals</h2>
          <div class="movieTiles">
-             
-             <button @click="addMovie('Luis Miguel')">Add to Watchlist</button>
+             <button @click="addMovie('Luis Miguel')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie1.jpg" alt="Luis Miguel" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Lucifer')">Add to Watchlist</button>
+             <button @click="addMovie('Lucifer')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie2.jpg" alt="Lucifer" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Haunted')">Add to Watchlist</button>
+             <button @click="addMovie('Haunted')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie3.jpg" alt="Haunted" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Who Killed Sara?')">Add to Watchlist</button>
+             <button @click="addMovie('Who Killed Sara?')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie4.jpg" alt="Who Killed Sara?" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Cobra Kai')">Add to Watchlist</button>
+             <button @click="addMovie('Cobra Kai')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie5.jpg" alt="Cobra Kai" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Filth')">Add to Watchlist</button>
+             <button @click="addMovie('Filth')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie6.jpg" alt="Filth" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Transformers')">Add to Watchlist</button>
+             <button @click="addMovie('Transformers')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie7.jpg" alt="Transformers" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('The Umbrella Academy')">Add to Watchlist</button>
+             <button @click="addMovie('The Umbrella Academy')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie8.jpg" alt="The Umbrella Academy" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Luis Miguel')">Add to Watchlist</button>
+             <button @click="addMovie('Luis Miguel')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie1.jpg" alt="Luis Miguel" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Lucifer')">Add to Watchlist</button>
+             <button @click="addMovie('Lucifer')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie2.jpg" alt="Lucifer" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Haunted')">Add to Watchlist</button>
+             <button @click="addMovie('Haunted')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie3.jpg" alt="Haunted" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Who Killed Sara?')">Add to Watchlist</button>
+             <button @click="addMovie('Who Killed Sara?')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie4.jpg" alt="Who Killed Sara?" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Cobra Kai')">Add to Watchlist</button>
+             <button @click="addMovie('Cobra Kai')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie5.jpg" alt="Cobra Kai" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Filth')">Add to Watchlist</button>
+             <button @click="addMovie('Filth')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie6.jpg" alt="Filth" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('Transformers')">Add to Watchlist</button>
+             <button @click="addMovie('Transformers')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie7.jpg" alt="Transformers" class="ind-mov-tile lrg-mov-tile">
-             <button @click="addMovie('The Umbrella Academy')">Add to Watchlist</button>
+             <button @click="addMovie('The Umbrella Academy')" :disabled="watchlist.length===20">Add to Watchlist</button>
              <img src="static/netflix-images/large-movie8.jpg" alt="The Umbrella Academy" class="ind-mov-tile lrg-mov-tile">
          </div>
      </div>
@@ -70,21 +69,37 @@
      <div class="row">
         <h2>Trending</h2>
         <div class="movieTiles">
+            <button @click="addMovie('Mortal Kombat')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie1.jpg" alt="Luis Miguel" class="ind-mov-tile">
+            <button @click="addMovie('USA Down')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie2.jpg" alt="Lucifer" class="ind-mov-tile">
+            <button @click="addMovie('Godzilla vs King Kong')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie3.jpg" alt="Haunted" class="ind-mov-tile">
+            <button @click="addMovie('The Mitchells')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie4.jpg" alt="Who Killed Sara?" class="ind-mov-tile">
+            <button @click="addMovie('Falcon and Winter Soldier')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie5.jpg" alt="Cobra Kai" class="ind-mov-tile">
+            <button @click="addMovie('Lamp Guy')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie6.jpg" alt="Filth" class="ind-mov-tile">
+            <button @click="addMovie('Face Punch')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie7.jpg" alt="Transformers" class="ind-mov-tile">
+            <button @click="addMovie('Not Naruto')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie8.jpg" alt="The Umbrella Academy" class="ind-mov-tile">
+            <button @click="addMovie('Mortal Kombat')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie1.jpg" alt="Luis Miguel" class="ind-mov-tile">
+            <button @click="addMovie('USA Down')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie2.jpg" alt="Lucifer" class="ind-mov-tile">
+            <button @click="addMovie('Godzilla vs King Kong')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie3.jpg" alt="Haunted" class="ind-mov-tile">
+            <button @click="addMovie('The Mitchells')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie4.jpg" alt="Who Killed Sara?" class="ind-mov-tile">
+            <button @click="addMovie('Falcon and Winter Soldier')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie5.jpg" alt="Cobra Kai" class="ind-mov-tile">
+            <button @click="addMovie('Lamp Guy')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie6.jpg" alt="Filth" class="ind-mov-tile">
+            <button @click="addMovie('Face Punch')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie7.jpg" alt="Transformers" class="ind-mov-tile">
+            <button @click="addMovie('Not Naruto')" :disabled="watchlist.length===20">Add To Watchlist</button>
             <img src="static/netflix-images/small-movie8.jpg" alt="The Umbrella Academy" class="ind-mov-tile">
         </div>
     </div>
@@ -93,6 +108,7 @@
         <h2>Watchlist</h2>
         <div class="movieTiles" id="watchlist">
             <div>{{watchlist}}</div>
+            <button @click="dltMovie">Remove Title</button>
         </div>
     </div>
     </div>
