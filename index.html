@@ -21,14 +21,14 @@
         <div class="bannerContent">
             <h1 class="csTitle">Coming Soon: Pokemon</h1>
             <div class="bannerbtns">
-                <button class="bannerButton">Remind Me</button>
-                <button class="bannerButton">Watchlist</button>
+                <button class="bannerButton" @click="changeState('no-watchlist')">Movies</button>
+                <button class="bannerButton" @click="changeState('watchlist')">Watchlist</button>
             </div>
             <div class="bannerDescription">After a scientific experiment leads to the creation of a clone of Mewtwo, he sets out to destroy the world. Ash and his friends then decide to thwart Mewtwo's evil...</div>
         </div>
     </div>
 
-     <div class="row">
+     <div class="row" v-if="state==='no-watchlist'">
          <h2>Netflix Originals</h2>
          <div class="movieTiles">
              <button @click="addMovie('Luis Miguel')" :disabled="watchlist.length===20">Add to Watchlist</button>
@@ -66,7 +66,7 @@
          </div>
      </div>
 
-     <div class="row">
+     <div class="row" v-if="state==='no-watchlist'">
         <h2>Trending</h2>
         <div class="movieTiles">
             <button @click="addMovie('Mortal Kombat')" :disabled="watchlist.length===20">Add To Watchlist</button>
@@ -104,12 +104,14 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" v-else="state==='watchlist'">
         <h2>Watchlist</h2>
-        <div class="movieTiles" id="watchlist">
-            <div>{{watchlist}}</div>
-            <button @click="dltMovie">Remove Title</button>
+        <div class="movieTiles">
+            <div id="watchlist">{{watchlist}}</div><br>
+            <p id="savedList"></p>
         </div>
+        <button @click="dltMovie">Remove Title</button>
+        <button @click="save">Save List</button>
     </div>
     </div>
     <script src="scipts/netflix.js"></script>
